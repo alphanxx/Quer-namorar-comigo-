@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br"> 
 <head>
@@ -6,7 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Landing Page de Venda</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+body {
+  margin: 0;
+  background: #0f0f0f;
+  height: 300vh;
+}
+
+.div1 {
+  margin: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  color: white;
+  text-shadow:0 0 20px red;
+
+}
+
+
+.button1 {
+  font-size: 30px;
+  height: 50px;
+  width: 170px;
+  background: linear-gradient(135deg, #2563EB, #93C5FD);
+  border: solid 1px red;
+  border-radius: 30px;
+  animation: rgb 16s infinite;
+    animation: active 2s infinite;
+  
+  filter: grayscale(100%);
+  box-shadow:0 0 20px;
+  
+}
+
+
+
+.button2 {
+  font-size: 30px;
+  height: 50px;
+  width: 170px;
+  background: linear-gradient(135deg, #2563EB, #93C5FD);
+  border: solid 1px red;
+  border-radius: 30px;
+  transition: transform 0.2s;
+  box-shadow: 0 0 20px;
+}
+
+/* ✅ Seletor corrigido de .button1 para .button2 */
+.button2:active {
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* ✅ Keyframe criado para o animation: rgb funcionar */
+@keyframes rgb {
+  0%   { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes rgb {
+  0% { border: solid 5px rgb(255, 0, 0); }
+  33% { border: solid 4px rgb(0, 255, 0); }
+  66% { border: solid 3px rgb(0, 0, 255); }
+  100% { border: solid 4px rgb(255, 255, 0); }
+}
+  </style>
 </head>
 <body>
   <header>
